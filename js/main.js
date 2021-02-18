@@ -1,14 +1,14 @@
 
-/*
+
 window.addEventListener("load", addListeners);
 
 
 function addListeners() {
-    document.getElementById("testButton").addEventListener("click", addConsole);
+    document.getElementById("testButton").addEventListener("click", start_bot);
 
 }
 
-*/
+
 var console_content = "";
 
 function addConsole() {

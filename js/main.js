@@ -1,5 +1,5 @@
 
-
+/*
 window.addEventListener("load", addListeners);
 
 
@@ -7,7 +7,7 @@ function addListeners() {
     document.getElementById("testButton").addEventListener("click", addConsole());
 
 }
-
+*/
 
 var console_content = "";
 

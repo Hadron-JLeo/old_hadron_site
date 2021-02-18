@@ -4,7 +4,7 @@ window.addEventListener("load", addListeners);
 
 
 function addListeners() {
-    document.getElementById("testButton").addEventListener("click", start_bot);
+    document.getElementById("testButton").addEventListener("click", addConsole());
 
 }
 

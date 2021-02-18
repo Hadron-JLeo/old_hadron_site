@@ -20,7 +20,7 @@ function addConsole() {
 function write_in_console(input) {
     console_content = document.getElementById("Console").innerHTML;
     console_content = console_content + "input";
-    
+    document.getElementById("Console").innerHTML = console_content;
     return console_content;
 }
 

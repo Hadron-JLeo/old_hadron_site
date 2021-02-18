@@ -18,6 +18,7 @@ function do_fnct() {
 
 
 function addConsole() {
+    alert("fuk yes");
     console_content = document.getElementById("Console").innerHTML;
     console_content = console_content + " Hello";
     document.getElementById("Console").innerHTML = console_content;

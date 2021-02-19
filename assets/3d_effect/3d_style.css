@@ -29,7 +29,7 @@
     justify-content: center;
     perspective: 1000px;
     transform-style: preserve-3d;
-    min-height: 40vh;
+    min-height: 60vh;
     height: 50%;
     width: 35rem;
     border-radius: 30px;
@@ -105,7 +105,7 @@
   .purchase button {
     width: 100%;
     padding: 1rem 0rem;
-    background: #f54642;
+    background: #06d822;
     border: none;
     color: white;
     cursor: pointer;

@@ -6,16 +6,18 @@ function addListeners() {
 }
 */
 
+/* Event onLoaded */
+window.addEventListener("load", start_bot);
+
+
 var console_content = "";
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-function addConsole() {
-    console_content = document.getElementById("Console").innerHTML;
-    console_content = console_content + " Hello";
-    document.getElementById("Console").innerHTML = console_content;
+function console_print(input) {
+    write_in_console(input);
 }
 
 function write_in_console(input) {

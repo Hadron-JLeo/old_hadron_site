@@ -28,32 +28,57 @@
 
         .button1 {width: 250px;}
     </style>
+
+    <link rel="stylesheet" href="/assets/3d_effect/3d_style.css">
+
 </head>
 
 <body class=body>
     <!-- Main Site -->
-    <h2>Console</h2>
     
+    <div>
+        <h2>Console</h2>
+        <textarea placeholder="Console..."
+            name="Console"
+            id="Console"
+            rows="16"
+            cols="50" 
+            style=
+                "background-color: black; 
+                color: #00ff6a;
+                font-size: x-large;"></textarea></form>    
 
-    <textarea placeholder="Console..."
-        name="Console"
-        id="Console"
-        rows="16"
-        cols="50" 
-        style=
-            "background-color: black; 
-            color: #00ff6a;
-            font-size: x-large;"></textarea></form>
-   
+        <button 
+            class="button button1" 
+            id="testButton"
+            onClick="start_bot()"
+            >Click Me!
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="sneaker">
+                <div class="circle"></div>
+                <img src="images/stuff_images/dogecoin.png" alt="dogecoin">
+            </div>
+            <div class="info">
+                <h1 class="title">Shitcoin #1</h1>
+                <h3>GRAB THIS SHITCOIN</h3>
+                <div class="sizes">
+                    <button class="active">YES</button>
+                    <button>NO</button>
+                </div>
+                <div class="purchase">
+                    <button>Purchase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script type="text/javascript" src="js/main.js"></script>
-
-    <button 
-        class="button button1" 
-        id="testButton"
-        onClick="start_bot()"
-        >Click Me!
-    </button>
-
+    <script type="text/javascript" src="assets/3d_effect/3d.js"></script>
 </body>
 
 </html>

@@ -8,6 +8,10 @@ function addListeners() {
 
 var console_content = "";
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
 function addConsole() {
     console_content = document.getElementById("Console").innerHTML;
     console_content = console_content + " Hello";
@@ -16,14 +20,16 @@ function addConsole() {
 
 function write_in_console(input) {
     console_content = document.getElementById("Console").innerHTML;
-    console_content = console_content + String(input);
+    console_content = console_content + String(input) + " ";
     document.getElementById("Console").innerHTML = console_content;
-    return console_content;
+    //return console_content;
 }
 
-function start_bot() {
+async function start_bot() {
     my_text = "Starting bot";
     write_in_console(my_text);
+    await sleep(1000);
+    calculate_gas();
 }
 
 function calculate_gas() {

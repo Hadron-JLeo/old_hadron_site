@@ -4,25 +4,48 @@
    
 <head>
     <style>
+        .body {
+            background-color: #c9c9c9;
+        }
+
         .button {
-          background-color: #4CAF50; /* Green */
-          border: none;
-          color: white;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          margin: 4px 2px;
-          cursor: pointer;
+            background-color: #2926d6; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+
+            /* Positioning */
+            position: absolute;
+            left: 600px;
+            top: 62px;
         }
 
         .button1 {width: 250px;}
     </style>
 </head>
 
-<body>
+<body class=body>
+    <!-- Main Site -->
     <h2>Console</h2>
+    
+
+    <textarea placeholder="Console..."
+        name="Console"
+        id="Console"
+        rows="16"
+        cols="50" 
+        style=
+            "background-color: black; 
+            color: #00ff6a;
+            font-size: x-large;"></textarea></form>
+   
+    <script type="text/javascript" src="js/main.js"></script>
 
     <button 
         class="button button1" 
@@ -30,20 +53,6 @@
         onClick="start_bot()"
         >Click Me!
     </button>
-   
-    <textarea 
-        id="Console"
-        name="Console" 
-        rows="16"
-        cols="50" 
-        value="Console..."
-    style=
-        "background-color: black; 
-        color: #00ff6a;
-        font-size: x-large;">
-    </textarea></form>
-   
-    <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 

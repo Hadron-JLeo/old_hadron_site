@@ -1,4 +1,0 @@
-
-d:
-cd D:\github-projects\hadron_site\other_projects
-sass --watch buttons.scss buttons.css

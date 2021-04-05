@@ -1,0 +1,33 @@
+body, html {
+    margin: 0; 
+    height: 100%;
+    overflow: hidden;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("resources/images/nebula.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+img.header {
+    max-width: auto;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+      
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

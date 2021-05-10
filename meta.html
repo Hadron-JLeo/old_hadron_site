@@ -2,7 +2,7 @@
 <html>
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/js/coin_scripts/metamask_connect.js"></script>
+  <!-- <script src="assets/js/coin_scripts/metamask_connect.js"></script> -->
 </head>
 <body>
   <div>
@@ -29,13 +29,16 @@
         $('#status').html('No Metamask (or other Web3 Provider) installed')
       }
     })
+    web3
 
     const initPayButton = () => {
       $('.pay-button').click(() => {
         // paymentAddress is where funds will be send to
         const paymentAddress = ''
-        const amountEth = 
+        const amountEth = 0
 
+              
+        const greeting = new Notification('Hi, How are you?');
         console.log('Payment failed', web3.eth.value);
         /*
         web3.eth.sendTransaction({

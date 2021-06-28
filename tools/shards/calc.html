@@ -10,50 +10,48 @@
     <style>
         .main-box {
             display: flex;
+            flex-direction: column;
+            margin:0 20%;
+            display: flex;
+            position: absolute;
             flex-direction: row;
             box-sizing: border-box;
             background-color: rgb(31, 31, 31);
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
-            
             overflow-y: hidden;
         }
 
         .middle {
             background-color: aliceblue;
-            display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: stretch;
-            margin: 0 auto;
-            padding: 0 1%;
+            padding: 0 20px;
+            margin: auto;
+            width:500px;
+            max-height: fit-content;
         }
 
         .upper{
             display: flex;
             flex-direction: column;
             justify-content:center;
-            top: 20%;
+            top: 50px;
             margin: 0 auto;
-            padding: 20% 0;
+            padding: 100px 0;
         }
         
         .top{
-            display: flex;
-            flex-direction: column;
             justify-content:center;
-            top: 20%;
+            top: 30px;
         }
 
         .img_upper {
-            display: flex;
-            flex-direction: column;
             justify-content:center;
-            height: 50%;
+            height: 250px;
             width: auto;
         }
 
         .lower{
-            height: 60%;
+            height: 250px;
             width: auto;
         }
 
@@ -61,28 +59,46 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            padding-right: 10px;
         }
 
         .right-side {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            padding-left: 10px
         }
 
-        html {
+        .mid_mid {
+            display: flex;
+            justify-content: center;
         }
-        
+
+        .lvl_img {
+            position: absolute;
+            left: 620px;
+            width: 200px;
+            height: auto;
+            
+        }
+
+        .rem_img {
+            position: absolute;
+            left: 860px;
+            height: auto;
+        }
+
+       .input1 {
+            position: relative;
+            width: 50px;
+       }
+
         body {
+            display: flex;
+            max-width: 80%;
             background-color: rgb(19, 19, 19);
-            margin:0;
+            margin:0 0;
             padding:0;
-        }
-
-        input{
-
-        }
-
-        body, input {
             font-family: 'Roboto', serif;
             font-size: 18px;
         }
@@ -112,17 +128,23 @@
             <div class="middle">
                 <div class="upper">
                     <form id="frm1">
-                    Next Tier: <input type="text" id="tier_input" value="S">
-                    Current Level: <input type="text" id="cur_level" value=0>
-                    Shards Inside: <input type="text" id="remaining_shards" value=0>
+                    Next Tier: <input type="text" id="tier_input" value="S" class="input1">
+                    Current Level: <input type="text" id="cur_level" value=17 class="input1">
+                    Shards Inside: <input type="text" id="remaining_shards" value=0 class="input1">
                     <input type="button" id="calc_btn" value="Calculate!">
                     </form>
+                    
+                    <div class="mid_mid">
+                        <img src="images/levels.JPG" class="lvl_img">
+                        <img src="images/rem.jpg" class="rem_img">
+                    </div>
                 </div>
+
                 <div class="lower">
                     <form id="frm2">
-                    Your Tier: <input type="text" id="my_input" value="A">
-                    Current Level: <input type="text" id="cur_level2" value=0>
-                    Shards Inside: <input type="text" id="remaining_shards2" value=0>
+                    Your Tier: <input type="text" id="my_input" value="A" class="input1">
+                    Current Level: <input type="text" id="cur_level2" value=0 class="input1">
+                    Shards Inside: <input type="text" id="remaining_shards2" value=0 class="input1">
                     <input type="button" id="calc_btn2" value="Calculate!">
                     </form>
                 </div>
@@ -130,15 +152,14 @@
                     <p  id="needed_shards_display" 
                         style="color:rgb(0, 211, 0); 
                             font-size: x-large;
-                            font-weight: bold;
-                            font-family:;">
+                            font-weight: bold;">
                         The amount of shards needed: 
                     </p>
                 
             </div>
 
 
-            <div class="left-side">
+            <div class="right-side">
                 <img src="images/froppy_2.jpg" class="img_side">
             </div>
 

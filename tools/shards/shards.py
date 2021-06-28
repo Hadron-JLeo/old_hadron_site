@@ -5,7 +5,7 @@ tiers_dict = {
     # Amount of shards needed to upgrade to the next rank
     'SSS+' : 0, # Highest Rank
     'SSS' : (25 * 20),
-    'SS' : (16 * 20),
+    'SS' : (13 * 20),
     'S' : (9 * 20),
     'A' : (3 * 20),
     'B' : (0 * 20)
@@ -32,10 +32,12 @@ def calculate_remaining_shards(next_tier, cur_level=0, shards_inside=0):
     
     cur_tier = get_prev_tier(next_tier)
     full_shards = tiers_dict.get(cur_tier)
+    print("full shards", full_shards)
     
 
-    remaining_shards = full_shards - (int((full_shards/20) * cur_level) + shards_inside)
-    return remaining_shards
+    remaining_shards = int(full_shards) - (int((full_shards/20) * int(cur_level)) + int(shards_inside))
+    return str(remaining_shards)
+
 
 #res = calculate_remaining_shards('SS', 11, 6)
 #print(res)
@@ -54,11 +56,11 @@ def calculate_shards_till_max(cur_tier, cur_level, shards_inside):
         full_shards = tiers_dict.get(cur_tier)
     
 
-        remaining_shards = full_shards - (int((full_shards/20) * cur_level) + shards_inside)
+        remaining_shards = int(full_shards) - (int((full_shards/20) * int(cur_level)) + int(shards_inside))
         #print(remaining_shards)
         return remaining_shards
 
-    
+
     for tier in reversed(tiers_list[0:tiers_list.index(cur_tier)+1]):
         #print(tier)
         cur_index = tiers_list.index(start_tier)

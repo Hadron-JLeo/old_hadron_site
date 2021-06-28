@@ -8,20 +8,85 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto">
     <style>
-        body{
-            display: grid;
-            grid-auto-flow: row;
-            grid-template-rows: 500px 0 auto 50%;
-            justify-content: center;
-            left: 50%;
-        }
-        body, input {
-        font-family: 'Roboto', serif;
-        font-size: 24px;
+        .main-box {
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            background-color: rgb(31, 31, 31);
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
         }
 
-        input{
+        .middle {
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            margin: 0 auto;
+            padding: 0 2%;
+        }
+
+        .upper{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            top: 20%;
+            margin: 0 auto;
+            padding: 5% 0;
+        }
+        
+        .top{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            top: 20%;
+            padding: 0 0;
+        }
+
+        .img_upper {
+            height:90%;
+            width: auto;
+        }
+
+        .lower{
+
+        }
+
+        .left-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .right-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        html {
+            height: 100%
+        }
+        
+        body {
+            background-color: rgb(19, 19, 19);
             
+        }
+
+        body, input {
+            font-family: 'Roboto', serif;
+            font-size: 24px;
+        }
+
+
+
+        .img_side {
+            height: 900px;
+            width: auto;
+        }
+
+        .footer1 {
+            background-color: rgb(75, 75, 75);
         }
     </style>
 
@@ -32,47 +97,52 @@
     <header></header>
     <nav></nav>
     <main>
+        <div class="main-box">
+            <div class="left-side">
+                <img src="images/froppy_3.jpg" class="img_side">
+            </div>
 
-        <form id="frm1">
-        Next Tier: <input type="text" name="fname" id="tier_input" value="A">
-        Current Level: <input type="text" name="lname" id="cur_level" value="5">
-        Shards Inside: <input type="text" name="lname" id="remaining_shards" value="0">
-        <input type="button" id="calc_btn" value="Calculate!">
-        </form>
+            <div class="middle">
+                <div class="top">
+                    <img src="images/promo_banner.jpg" class="img_upper">
+                </div>
+                <div class="upper">
+                    <form id="frm1">
+                    Next Tier: <input type="text" id="tier_input" value="S">
+                    Current Level: <input type="text" id="cur_level" value=>
+                    Shards Inside: <input type="text" id="remaining_shards" value=>
+                    <input type="button" id="calc_btn" value="Calculate!">
+                    </form>
+                </div>
+                <div class="lower">
+                    <form id="frm2">
+                    Your Tier: <input type="text" id="my_input" value="A">
+                    Current Level: <input type="text" id="cur_level2" value=>
+                    Shards Inside: <input type="text" id="remaining_shards2" value=>
+                    <input type="button" id="calc_btn2" value="Calculate!">
+                    </form>
+                </div>
 
-        <p style="color:rgb(0, 211, 0); 
-                font-size: x-large;
-                font-weight: bold;
-                font-family:;">
-            The amount of shards needed: 
-        </p>
-    
+                    <p  id="needed_shards_display" 
+                        style="color:rgb(0, 211, 0); 
+                            font-size: x-large;
+                            font-weight: bold;
+                            font-family:;">
+                        The amount of shards needed: 
+                    </p>
+                
+            </div>
+
+
+            <div class="left-side">
+                <img src="images/froppy_2.jpg" class="img_side">
+            </div>
+
+        </div>
     </main>
 
-    <footer>
-        <script type="text/python">
-            import browser
-            import shards
-    
-            calc_btn = browser.document.getElementById("calc_btn")
-    
-            def get_field_val(field_id:str):
-                return browser.document.getElementById(field_id).value
-    
-            next_tier = get_field_val("cur_level")
-            cur_level = browser.document.getElementById("cur_level").value
-            remaining_shards = browser.document.getElementById("remaining_shards").value
-            
-    
-            def output(ev):
-                browser.alert(next_tier)  
-    
-            #output(next_tier)
-            #output(shards.calculate_shards_till_max('S', 10, 0))
-    
-            calc_btn.bind("click", output)
-        </script>
-    </footer>
+    <script type="text/python" src=main.py></script>
+
 
   </body>
 

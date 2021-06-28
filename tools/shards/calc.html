@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <script
+      src="https://raw.githack.com/brython-dev/brython/master/www/src/brython.js">
+    </script>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+        body{
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-rows: 500px 0 auto 50%;
+            justify-content: center;
+            left: 50%;
+        }
+        body, input {
+        font-family: 'Roboto', serif;
+        font-size: 24px;
+        }
+
+        input{
+            
+        }
+    </style>
+
+  </head>
+
+
+  <body onload="brython()">
+    <header></header>
+    <nav></nav>
+    <main>
+
+        <form id="frm1">
+        Next Tier: <input type="text" name="fname" id="tier_input" value="A">
+        Current Level: <input type="text" name="lname" id="cur_level" value="5">
+        Shards Inside: <input type="text" name="lname" id="remaining_shards" value="0">
+        <input type="button" id="calc_btn" value="Calculate!">
+        </form>
+
+        <p style="color:rgb(0, 211, 0); 
+                font-size: x-large;
+                font-weight: bold;
+                font-family:;">
+            The amount of shards needed: 
+        </p>
+    
+    </main>
+
+    <footer>
+        <script type="text/python">
+            import browser
+            import shards
+    
+            calc_btn = browser.document.getElementById("calc_btn")
+    
+            def get_field_val(field_id:str):
+                return browser.document.getElementById(field_id).value
+    
+            next_tier = get_field_val("cur_level")
+            cur_level = browser.document.getElementById("cur_level").value
+            remaining_shards = browser.document.getElementById("remaining_shards").value
+            
+    
+            def output(ev):
+                browser.alert(next_tier)  
+    
+            #output(next_tier)
+            #output(shards.calculate_shards_till_max('S', 10, 0))
+    
+            calc_btn.bind("click", output)
+        </script>
+    </footer>
+
+  </body>
+
+
+</html>

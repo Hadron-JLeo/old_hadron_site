@@ -16,7 +16,10 @@ tiers_list = list(tiers_dict.keys())
 def get_prev_tier(tier):
     """ Get previous tier of input. E.g.: 'A' -> 'B' """
     key_list = tiers_list
-    cur_index = (key_list.index(tier) + 1)
+    try:
+        cur_index = (key_list.index(tier) + 1)
+    except:
+        cur_index = key_list.index(tier)
     prev_tier = key_list[cur_index] 
     
     return prev_tier

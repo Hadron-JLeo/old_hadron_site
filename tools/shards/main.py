@@ -42,7 +42,7 @@ def nullify(val):
 
 def main(ev):
     """ Para used to identify as event """
-    next_tier, cur_level, remaining_shards = str(refresh_values(1)[0]).upper, refresh_values(1)[1], refresh_values(1)[2]
+    next_tier, cur_level, remaining_shards = str(refresh_values(1)[0]).upper(), refresh_values(1)[1], refresh_values(1)[2]
     cur_level = nullify(cur_level)
     remaining_shards = nullify(remaining_shards)
     res=str(shards.calculate_remaining_shards(next_tier, cur_level, remaining_shards))
